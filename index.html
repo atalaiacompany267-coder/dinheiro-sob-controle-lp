@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dinheiro Sob Controle - Sistema completo de gestão financeira pessoal. Automatize seus gastos, visualize gráficos e tenha total segurança.">
     <meta name="keywords" content="controle financeiro, gestão financeira, orçamento pessoal, finanças">
+    <meta name="theme-color" content="#0f172a">
     <title>Dinheiro Sob Controle - Sua Vida Financeira Organizada</title>
     
     <!-- Bootstrap 5 CSS -->
@@ -13,14 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-theme">
     <!-- Header/Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="#inicio">
                 <i class="fas fa-wallet me-2"></i>Dinheiro Sob Controle
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -29,10 +32,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
+                        <a class="nav-link" href="#como-funciona">Como Funciona</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#beneficios">Benefícios</a>
+                        <a class="nav-link" href="#para-quem">Para Quem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">FAQ</a>
@@ -48,149 +60,163 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section" id="inicio">
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6 hero-content">
-                    <span class="badge bg-success mb-3 px-3 py-2">
-                        <i class="fas fa-star me-2"></i>Sistema Completo de Gestão Financeira
-                    </span>
-                    <h1 class="display-3 fw-bold mb-4">
-                        Tome o Controle do Seu
-                        <span class="gradient-text">Dinheiro</span>
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <h1 class="hero-title fw-black mb-4">
+                        Organize Suas Finanças
+                        <span class="gradient-text d-block">Sem Complicação</span>
                     </h1>
-                    <p class="lead mb-4 text-white-50">
-                        Organize suas finanças pessoais de forma simples e inteligente. 
-                        Acompanhe seus gastos, defina metas e alcance a liberdade financeira que você sempre quis.
+                    <p class="hero-subtitle text-uppercase fw-bold mb-4">
+                        CONTROLAR SEU DINHEIRO NUNCA FOI TÃO SIMPLES.
                     </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
-                        <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success btn-lg btn-cta px-5" target="_blank">
-                            <i class="fas fa-rocket me-2"></i>Quero Meu Controle Financeiro
-                        </a>
-                        <a href="#funcionalidades" class="btn btn-outline-light btn-lg">
-                            Ver Funcionalidades
-                        </a>
-                    </div>
-                    <div class="hero-stats d-flex gap-4 flex-wrap">
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Seguro</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Acesso</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">0</div>
-                            <div class="stat-label">Complicação</div>
-                        </div>
+                    <p class="hero-description mb-5">
+                        Acompanhe gastos, crie metas e automatize lançamentos fixos de forma inteligente e humanizada.
+                    </p>
+                    <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success btn-xl btn-cta mb-4" target="_blank">
+                        <i class="fas fa-rocket me-2"></i>QUERO ORGANIZAR MINHAS FINANÇAS
+                    </a>
+                    <div class="hero-badge">
+                        <i class="fas fa-shield-check text-success me-2"></i>
+                        <span>+1.000 vidas financeiras transformadas</span>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center hero-image">
-                    <div class="hero-mockup">
-                        <i class="fas fa-chart-line fa-10x text-success opacity-75"></i>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <!-- ESPAÇO PARA VÍDEO/IMAGEM DE DEMONSTRAÇÃO -->
+                    <div class="demo-video-container">
+                        <div class="placeholder-box">
+                            <i class="fas fa-play-circle fa-6x mb-4"></i>
+                            <h5>Vídeo de Demonstração</h5>
+                            <p class="small">Adicione aqui um vídeo mostrando o sistema em ação</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <a href="#funcionalidades" class="text-white">
-                <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
-            </a>
+    </section>
+
+    <!-- Como Funciona / Video Demo Section -->
+    <section class="video-demo-section py-5" id="como-funciona">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">CONHEÇA O DINHEIRO SOB CONTROLE POR DENTRO</span>
+                <h2 class="section-title mb-3">Suas Finanças com Superpoderes!</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- ESPAÇO PARA VÍDEO DEMONSTRAÇÃO PRINCIPAL -->
+                    <div class="video-demo-box" data-aos="zoom-in">
+                        <div class="placeholder-box large">
+                            <i class="fas fa-video fa-6x mb-4"></i>
+                            <h4 class="mb-3">Vídeo de Demonstração Completa</h4>
+                            <p>Adicione aqui um vídeo mostrando todas as funcionalidades do sistema</p>
+                            <p class="small text-muted">Formato recomendado: MP4, 16:9, até 1080p</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Funcionalidades Section -->
-    <section class="features-section py-5" id="funcionalidades">
+    <!-- Números / Estatísticas -->
+    <section class="stats-section py-5">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <span class="badge bg-primary mb-3">Funcionalidades</span>
-                <h2 class="display-4 fw-bold mb-3">Tudo que Você Precisa em Um Só Lugar</h2>
-                <p class="lead text-muted">Recursos poderosos para transformar sua vida financeira</p>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">NOSSOS NÚMEROS</span>
+                <h2 class="section-title mb-3">Nossos Resultados Falam Por Nós</h2>
             </div>
             
             <div class="row g-4">
-                <!-- Feature 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-blue">
-                            <i class="fas fa-magic fa-2x"></i>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3 class="stat-number">+1.000</h3>
+                        <p class="stat-description">usuários ativos controlando suas finanças</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <i class="fas fa-receipt fa-3x mb-3"></i>
+                        <h3 class="stat-number">+50K</h3>
+                        <p class="stat-description">lançamentos registrados no sistema</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h3 class="stat-number">+R$ 1M</h3>
+                        <p class="stat-description">em finanças organizadas pelos usuários</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card">
+                        <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                        <h3 class="stat-number">24/7</h3>
+                        <p class="stat-description">acesso total de qualquer dispositivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Quem é Este Sistema -->
+    <section class="target-audience-section py-5" id="para-quem">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">O DINHEIRO SOB CONTROLE É PARA MIM?</span>
+                <h2 class="section-title mb-4">Se você quer organizar suas finanças e parar de perder dinheiro,<br class="d-none d-md-block">este sistema é para você!</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="audience-card">
+                        <div class="audience-icon mb-4">
+                            <i class="fas fa-user-tie fa-4x"></i>
                         </div>
-                        <h3 class="h4 mb-3">Automação Inteligente</h3>
-                        <p class="text-muted mb-0">
-                            Lançamentos fixos são criados automaticamente todo mês. 
-                            Você só precisa confirmar quando pagar. Zero trabalho manual!
+                        <h4 class="mb-3">Profissionais</h4>
+                        <p>
+                            Que desejam ter controle total sobre salário, gastos mensais e investimentos sem complicação.
                         </p>
                     </div>
                 </div>
                 
-                <!-- Feature 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-green">
-                            <i class="fas fa-chart-pie fa-2x"></i>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="audience-card">
+                        <div class="audience-icon mb-4">
+                            <i class="fas fa-home fa-4x"></i>
                         </div>
-                        <h3 class="h4 mb-3">Gráficos Interativos</h3>
-                        <p class="text-muted mb-0">
-                            Visualize seus gastos por categoria, acompanhe sua evolução mensal 
-                            e entenda para onde vai cada centavo do seu dinheiro.
+                        <h4 class="mb-3">Famílias</h4>
+                        <p>
+                            Que querem organizar o orçamento doméstico, pagar contas em dia e poupar para o futuro.
                         </p>
                     </div>
                 </div>
                 
-                <!-- Feature 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-purple">
-                            <i class="fas fa-shield-alt fa-2x"></i>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="audience-card">
+                        <div class="audience-icon mb-4">
+                            <i class="fas fa-graduation-cap fa-4x"></i>
                         </div>
-                        <h3 class="h4 mb-3">100% Seguro</h3>
-                        <p class="text-muted mb-0">
-                            Seus dados ficam protegidos com criptografia de ponta. 
-                            Sistema hospedado em servidores confiáveis e seguros.
+                        <h4 class="mb-3">Estudantes</h4>
+                        <p>
+                            Que precisam gerenciar mesada, bolsa ou trabalho part-time de forma inteligente.
                         </p>
                     </div>
                 </div>
                 
-                <!-- Feature 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-orange">
-                            <i class="fas fa-bullseye fa-2x"></i>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="audience-card">
+                        <div class="audience-icon mb-4">
+                            <i class="fas fa-store fa-4x"></i>
                         </div>
-                        <h3 class="h4 mb-3">Metas Financeiras</h3>
-                        <p class="text-muted mb-0">
-                            Defina objetivos, acompanhe seu progresso e realize seus sonhos. 
-                            Seja uma viagem, carro novo ou reserva de emergência.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-red">
-                            <i class="fas fa-coins fa-2x"></i>
-                        </div>
-                        <h3 class="h4 mb-3">Controle de Dívidas</h3>
-                        <p class="text-muted mb-0">
-                            Acompanhe suas dívidas, parcelas pagas e saldo devedor. 
-                            Veja quanto falta para quitar e planeje amortizações.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon bg-gradient-teal">
-                            <i class="fas fa-mobile-alt fa-2x"></i>
-                        </div>
-                        <h3 class="h4 mb-3">Acesso em Qualquer Lugar</h3>
-                        <p class="text-muted mb-0">
-                            Responsive design perfeito. Acesse do celular, tablet ou computador. 
-                            Suas finanças sempre à mão, onde você estiver.
+                        <h4 class="mb-3">Empreendedores</h4>
+                        <p>
+                            Que buscam separar finanças pessoais do negócio e ter visão clara do fluxo de caixa.
                         </p>
                     </div>
                 </div>
@@ -198,72 +224,508 @@
         </div>
     </section>
 
-    <!-- Prova Social Section -->
-    <section class="social-proof-section py-5">
+    <!-- Funcionalidades Detalhadas -->
+    <section class="features-detailed-section py-5" id="funcionalidades">
+        <div class="container py-5">
+            <!-- Feature 1: Lançamentos Automáticos -->
+            <div class="row align-items-center mb-5 pb-5 feature-row" data-aos="fade-right">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <!-- ESPAÇO PARA IMAGEM/GIF -->
+                    <div class="feature-image-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-magic fa-5x mb-3"></i>
+                            <p class="mb-2">Imagem: Tela de lançamentos automáticos</p>
+                            <small>Mostre como os lançamentos fixos são criados automaticamente</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <span class="feature-badge">AUTOMAÇÃO INTELIGENTE</span>
+                    <h2 class="feature-title mb-4">Lançamentos Fixos Automáticos</h2>
+                    <p class="feature-subtitle mb-4">Salve suas mensagens e envie apenas com um clique</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Salve seus gastos fixos uma única vez</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Eles são criados automaticamente todo mês</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Você só confirma quando pagar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Gráficos e Visualizações -->
+            <div class="row align-items-center mb-5 pb-5 feature-row" data-aos="fade-left">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="feature-badge">VISUALIZAÇÃO CLARA</span>
+                    <h2 class="feature-title mb-4">Gráficos Interativos e Relatórios</h2>
+                    <p class="feature-subtitle mb-4">Acompanhe sua evolução financeira com gráficos</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Veja seus gastos por categoria em gráficos</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acompanhe evolução mensal e anual</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entenda para onde vai cada centavo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- ESPAÇO PARA IMAGEM/GIF -->
+                    <div class="feature-image-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-chart-pie fa-5x mb-3"></i>
+                            <p class="mb-2">Imagem: Dashboard com gráficos</p>
+                            <small>Mostre os gráficos de pizza e linhas do Chart.js</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Metas Financeiras -->
+            <div class="row align-items-center mb-5 pb-5 feature-row" data-aos="fade-right">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <!-- ESPAÇO PARA IMAGEM/GIF -->
+                    <div class="feature-image-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-bullseye fa-5x mb-3"></i>
+                            <p class="mb-2">Imagem: Tela de metas financeiras</p>
+                            <small>Mostre como criar e acompanhar metas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <span class="feature-badge">REALIZE SEUS SONHOS</span>
+                    <h2 class="feature-title mb-4">Metas e Objetivos Financeiros</h2>
+                    <p class="feature-subtitle mb-4">Crie funis de mensagens para seu atendimento</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Defina metas de economia ou quitação de dívidas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acompanhe progresso com barra visual</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vincule lançamentos para atualização automática</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Controle de Dívidas -->
+            <div class="row align-items-center feature-row" data-aos="fade-left">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="feature-badge">SAIA DO VERMELHO</span>
+                    <h2 class="feature-title mb-4">Gestão Completa de Dívidas</h2>
+                    <p class="feature-subtitle mb-4">Use palavras chave para disparar mensagens pré-programadas</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Registre dívidas e parcelas pagas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Veja saldo devedor atualizado em tempo real</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Planeje amortizações e quitação antecipada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- ESPAÇO PARA IMAGEM/GIF -->
+                    <div class="feature-image-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-hand-holding-usd fa-5x mb-3"></i>
+                            <p class="mb-2">Imagem: Tela de controle de dívidas</p>
+                            <small>Mostre a gestão de parcelas e saldo devedor</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">AUTOMAÇÃO E HUMANIZAÇÃO</span>
+                <h2 class="section-title mb-4">Ofereça automatização e humanização<br class="d-none d-md-block">no seu controle financeiro</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <i class="fas fa-robot fa-3x mb-3"></i>
+                        <h5 class="mb-3">Lançamentos Automáticos</h5>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-bar fa-3x mb-3"></i>
+                        <h5 class="mb-3">Relatórios Inteligentes</h5>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <i class="fas fa-bell fa-3x mb-3"></i>
+                        <h5 class="mb-3">Alertas Personalizados</h5>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                        <h5 class="mb-3">100% Seguro</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials-section py-5" id="depoimentos">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">DEPOIMENTOS</span>
+                <h2 class="section-title mb-3">Veja os depoimentos de quem já usa!</h2>
+                <p class="section-description">
+                    Descubra como o Dinheiro Sob Controle tem transformado a vida financeira das pessoas,<br class="d-none d-md-block">
+                    ajudando a organizar gastos e alcançar metas com facilidade.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- ESPAÇO PARA VÍDEOS DE DEPOIMENTOS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-video-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-play-circle fa-4x mb-3"></i>
+                            <p>Vídeo Depoimento 1</p>
+                            <small>Adicione depoimento em vídeo</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-video-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-play-circle fa-4x mb-3"></i>
+                            <p>Vídeo Depoimento 2</p>
+                            <small>Adicione depoimento em vídeo</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-video-box">
+                        <div class="placeholder-box">
+                            <i class="fas fa-play-circle fa-4x mb-3"></i>
+                            <p>Vídeo Depoimento 3</p>
+                            <small>Adicione depoimento em vídeo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section class="about-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">QUEM SOMOS NÓS?</span>
+                <h2 class="section-title mb-4">[Seu Nome Aqui]</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-content" data-aos="fade-up">
+                        <!-- ESPAÇO PARA SUA FOTO -->
+                        <div class="about-image-placeholder mb-4">
+                            <i class="fas fa-user-circle fa-8x"></i>
+                            <p class="mt-3">Adicione sua foto aqui</p>
+                        </div>
+                        
+                        <div class="about-text">
+                            <p class="lead text-center mb-4">
+                                <strong>[Espaço para sua história e biografia]</strong>
+                            </p>
+                            <p class="text-muted">
+                                Conte aqui sua história: por que criou o sistema, sua experiência com finanças pessoais, 
+                                sua missão de ajudar pessoas a organizarem suas vidas financeiras, etc.
+                            </p>
+                            <p class="text-muted">
+                                Exemplo: "Comecei a desenvolver o Dinheiro Sob Controle porque eu mesmo tinha dificuldade 
+                                em organizar minhas finanças. Depois de anos usando planilhas complicadas, decidi criar 
+                                uma solução simples e eficiente que qualquer pessoa pudesse usar."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="differentials-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">NOSSOS DIFERENCIAIS</span>
+                <h2 class="section-title mb-4">É isso que nos torna únicos no mercado</h2>
+                <p class="section-description mb-5">
+                    O Dinheiro Sob Controle não é apenas uma ferramenta, é o parceiro ideal para transformar<br class="d-none d-md-block">
+                    a maneira como você gerencia suas finanças. Com ele, você ganha eficiência e tranquilidade.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-dollar-sign fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Preço Acessível</h5>
+                        <p>
+                            Focamos no essencial para otimizar seu controle financeiro, permitindo que você economize 
+                            sem perder eficiência.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-sync-alt fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Automação Completa</h5>
+                        <p>
+                            Configure lançamentos fixos uma vez e deixe o sistema fazer o resto automaticamente 
+                            todos os meses.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Visualização Clara</h5>
+                        <p>
+                            Gráficos interativos e relatórios detalhados para você entender exatamente para onde 
+                            vai seu dinheiro.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-lock fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Privacidade e Segurança</h5>
+                        <p>
+                            Seus dados financeiros são criptografados e protegidos em servidores seguros e confiáveis.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-user-check fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Fácil de Usar</h5>
+                        <p>
+                            Interface intuitiva e simples, adequada até para quem não tem conhecimento técnico 
+                            ou experiência com finanças.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="differential-card">
+                        <div class="differential-icon mb-4">
+                            <i class="fas fa-headset fa-3x"></i>
+                        </div>
+                        <h5 class="mb-3">Suporte e Atualizações</h5>
+                        <p>
+                            Oferecemos suporte dedicado e atualizações constantes, adicionando novos recursos 
+                            e melhorias ao sistema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section class="pricing-section py-5" id="planos">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">NOSSOS PLANOS</span>
+                <h2 class="section-title mb-3">Qual plano te atende melhor?</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Plano Mensal -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4 class="text-uppercase mb-3">Plano Mensal</h4>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-old-price">De R$ 59,90 por</div>
+                            <div class="pricing-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">49,9</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-outline-success w-100 mb-4" target="_blank">
+                                ASSINAR MENSAL
+                            </a>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Lançamentos automáticos ilimitados</li>
+                                <li><i class="fas fa-check"></i> Gráficos e relatórios completos</li>
+                                <li><i class="fas fa-check"></i> Gestão de metas financeiras</li>
+                                <li><i class="fas fa-check"></i> Controle de dívidas</li>
+                                <li><i class="fas fa-check"></i> Acesso mobile e desktop</li>
+                                <li><i class="fas fa-check"></i> Atualizações automáticas</li>
+                                <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                                <li><i class="fas fa-check"></i> Renovação automática</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plano Anual (Destaque) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">MAIS ASSINADO</div>
+                        <div class="pricing-header">
+                            <h4 class="text-uppercase mb-2">Plano Anual</h4>
+                            <p class="text-success fw-bold">com 50% de desconto</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-old-price">De R$ 598,90 por</div>
+                            <div class="pricing-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">299,9</span>
+                                <span class="period">/ano</span>
+                            </div>
+                            <div class="pricing-installment mb-3">ou em até 12x de R$ 29,90</div>
+                            <div class="pricing-savings mb-4">economize R$ 298,90</div>
+                            <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success w-100 mb-4" target="_blank">
+                                ASSINAR ANUAL
+                            </a>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Lançamentos automáticos ilimitados</li>
+                                <li><i class="fas fa-check"></i> Gráficos e relatórios completos</li>
+                                <li><i class="fas fa-check"></i> Gestão de metas financeiras</li>
+                                <li><i class="fas fa-check"></i> Controle de dívidas</li>
+                                <li><i class="fas fa-check"></i> Acesso mobile e desktop</li>
+                                <li><i class="fas fa-check"></i> Atualizações automáticas</li>
+                                <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                                <li><i class="fas fa-check"></i> Renovação automática</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plano Semestral -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4 class="text-uppercase mb-2">Plano Semestral</h4>
+                            <p class="text-success fw-bold">com 26% de desconto</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-old-price">De R$ 299,40 por</div>
+                            <div class="pricing-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">220,9</span>
+                                <span class="period">/semestre</span>
+                            </div>
+                            <div class="pricing-installment mb-3">ou em até 12x de R$ 22,90</div>
+                            <div class="pricing-savings mb-4">economize R$ 78,50</div>
+                            <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-outline-success w-100 mb-4" target="_blank">
+                                ASSINAR SEMESTRAL
+                            </a>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Lançamentos automáticos ilimitados</li>
+                                <li><i class="fas fa-check"></i> Gráficos e relatórios completos</li>
+                                <li><i class="fas fa-check"></i> Gestão de metas financeiras</li>
+                                <li><i class="fas fa-check"></i> Controle de dívidas</li>
+                                <li><i class="fas fa-check"></i> Acesso mobile e desktop</li>
+                                <li><i class="fas fa-check"></i> Atualizações automáticas</li>
+                                <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                                <li><i class="fas fa-check"></i> Renovação automática</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Trial -->
+    <section class="trial-section py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="social-proof-card text-center">
-                        <div class="mb-4">
-                            <i class="fas fa-quote-left fa-3x text-success opacity-50"></i>
-                        </div>
-                        <h2 class="display-5 fw-bold mb-4">
-                            Sistema Pensado para Ser Simples e Eficiente
-                        </h2>
-                        <p class="lead text-muted mb-5">
-                            Chega de planilhas complicadas, aplicativos confusos ou anotações perdidas. 
-                            O <strong>Dinheiro Sob Controle</strong> foi criado para que qualquer pessoa, 
-                            mesmo sem experiência financeira, possa organizar seu dinheiro em minutos.
-                        </p>
-                        <div class="row g-4 mb-5">
-                            <div class="col-md-4">
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-                                    <h4>Interface Intuitiva</h4>
-                                    <p class="text-muted mb-0">Tão fácil que você aprende usando</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-                                    <h4>Sem Curva de Aprendizado</h4>
-                                    <p class="text-muted mb-0">Comece a usar em menos de 5 minutos</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-                                    <h4>Suporte Completo</h4>
-                                    <p class="text-muted mb-0">Ajuda sempre que você precisar</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success btn-lg btn-cta px-5" target="_blank">
-                            <i class="fas fa-rocket me-2"></i>Quero Organizar Minhas Finanças Agora
-                        </a>
-                    </div>
+                <div class="col-lg-8 text-center" data-aos="zoom-in">
+                    <span class="section-subtitle mb-3 d-block">EXPERIMENTE O DINHEIRO SOB CONTROLE</span>
+                    <h2 class="section-title mb-4">
+                        Ainda está em dúvida se o sistema é para você?
+                    </h2>
+                    <p class="section-description mb-5">
+                        Experimente grátis por 7 dias e descubra na prática todos os benefícios que temos a oferecer!
+                    </p>
+                    <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success btn-xl btn-cta" target="_blank">
+                        <i class="fas fa-rocket me-2"></i>EXPERIMENTAR GRATUITAMENTE
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq-section py-5" id="faq">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <span class="badge bg-primary mb-3">FAQ</span>
-                <h2 class="display-4 fw-bold mb-3">Perguntas Frequentes</h2>
-                <p class="lead text-muted">Tire suas dúvidas antes de começar</p>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle">FAQ</span>
+                <h2 class="section-title mb-3">Perguntas Frequentes</h2>
+                <p class="section-description">
+                    Descubra como o Dinheiro Sob Controle pode transformar sua vida financeira
+                </p>
             </div>
             
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="accordion" id="faqAccordion">
                         <!-- FAQ 1 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     Como recebo meu acesso após a compra?
                                 </button>
                             </h2>
@@ -276,10 +738,10 @@
                         </div>
                         
                         <!-- FAQ 2 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     Posso usar em qualquer dispositivo?
                                 </button>
                             </h2>
@@ -292,10 +754,10 @@
                         </div>
                         
                         <!-- FAQ 3 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     Meus dados estão seguros?
                                 </button>
                             </h2>
@@ -308,10 +770,10 @@
                         </div>
                         
                         <!-- FAQ 4 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     Preciso de conhecimento técnico para usar?
                                 </button>
                             </h2>
@@ -324,10 +786,10 @@
                         </div>
                         
                         <!-- FAQ 5 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     Existe suporte se eu tiver dúvidas?
                                 </button>
                             </h2>
@@ -340,10 +802,10 @@
                         </div>
                         
                         <!-- FAQ 6 -->
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    <i class="fas fa-question-circle me-3 text-success"></i>
+                                    <i class="fas fa-question-circle me-3"></i>
                                     O que está incluso no acesso?
                                 </button>
                             </h2>
@@ -354,29 +816,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA Final Section -->
-    <section class="cta-section py-5">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="display-4 fw-bold text-white mb-4">
-                        Pronto Para Transformar Suas Finanças?
-                    </h2>
-                    <p class="lead text-white-50 mb-5">
-                        Junte-se a centenas de pessoas que já estão no controle do seu dinheiro. 
-                        Comece hoje mesmo e veja a diferença em sua vida financeira!
-                    </p>
-                    <a href="https://pay.cakto.com.br/3ah8tei_701038" class="btn btn-success btn-lg btn-cta px-5 mb-4" target="_blank">
-                        <i class="fas fa-rocket me-2"></i>Começar Agora - Acesso Imediato
-                    </a>
-                    <div class="text-white-50 small">
-                        <i class="fas fa-lock me-2"></i>Pagamento 100% Seguro via Cakto
+                        <!-- FAQ 7 -->
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="700">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    <i class="fas fa-question-circle me-3"></i>
+                                    Existe limite de lançamentos?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Não! Você pode criar quantos lançamentos, metas e categorias quiser. O sistema foi projetado 
+                                    para crescer junto com suas necessidades financeiras, sem limites artificiais.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,25 +839,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer py-4">
+    <footer class="footer py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-3 mb-lg-0">
+                <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5 class="fw-bold mb-3">
                         <i class="fas fa-wallet me-2"></i>Dinheiro Sob Controle
                     </h5>
-                    <p class="text-muted small mb-0">
+                    <p class="footer-description">
                         Sistema completo de gestão financeira pessoal. 
                         Organize suas finanças de forma simples e eficiente.
                     </p>
                 </div>
-                <div class="col-lg-6 text-lg-end">
-                    <div class="mb-3">
-                        <a href="#hero" class="text-muted text-decoration-none me-3">Início</a>
-                        <a href="#funcionalidades" class="text-muted text-decoration-none me-3">Funcionalidades</a>
-                        <a href="#faq" class="text-muted text-decoration-none">FAQ</a>
-                    </div>
-                    <p class="text-muted small mb-0">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-3">Links Rápidos</h6>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#funcionalidades">Funcionalidades</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Políticas de Privacidade</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright mb-0">
                         &copy; 2026 Dinheiro Sob Controle. Todos os direitos reservados.
                     </p>
                 </div>
@@ -412,9 +883,17 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Smooth Scroll & Animations -->
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Scripts -->
     <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
         // Smooth scroll para links âncora
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -429,10 +908,11 @@
             });
         });
 
-        // Navbar scroll effect com transição suave
+        // Navbar scroll effect
         let lastScroll = 0;
+        const navbar = document.getElementById('mainNav');
+        
         window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
             const currentScroll = window.pageYOffset;
             
             if (currentScroll > 50) {
@@ -442,33 +922,6 @@
             }
             
             lastScroll = currentScroll;
-        });
-
-        // Intersection Observer para animações de entrada
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Animar cards de features
-        window.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.feature-card, .benefit-item, .accordion-item');
-            
-            animatedElements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = `all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) ${index * 0.1}s`;
-                observer.observe(el);
-            });
         });
 
         // Adicionar efeito de ripple nos botões CTA
