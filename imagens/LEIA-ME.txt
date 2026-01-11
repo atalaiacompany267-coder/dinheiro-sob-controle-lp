@@ -1,0 +1,23 @@
+📁 COLOQUE SEUS ARQUIVOS NESTA PASTA
+
+Exemplo de estrutura:
+
+imagens/
+  ├── hero-demo.mp4           (Vídeo do topo da página)
+  ├── video-completo.mp4      (Vídeo da seção "Como Funciona")
+  ├── lancamentos.png         (Screenshot da tela de lançamentos)
+  ├── graficos.png            (Screenshot do dashboard com gráficos)
+  ├── metas.png               (Screenshot da gestão de metas)
+  ├── dividas.png             (Screenshot do controle de dívidas)
+  ├── foto-perfil.jpg         (Sua foto para a seção "Quem Somos")
+  ├── depoimento-1.mp4        (Vídeo depoimento cliente 1)
+  ├── depoimento-2.mp4        (Vídeo depoimento cliente 2)
+  └── depoimento-3.mp4        (Vídeo depoimento cliente 3)
+
+TAMANHOS RECOMENDADOS:
+- Vídeos: MP4, máximo 50MB cada
+- Screenshots: PNG ou JPG, 1920x1080 pixels
+- Foto perfil: JPG, 500x500 pixels
+- Otimize em: https://tinypng.com/
+
+Depois de adicionar os arquivos, edite o index.html seguindo o guia COMO_ADICIONAR_MIDIAS.md
